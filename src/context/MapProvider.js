@@ -9,7 +9,7 @@ export const MapProvider = ({children}) => {
     
     
     const [ipInfo, setipInfo] = useState({})
-    const [ipAddress, setIpAddress] = useState('')
+    const [ipAddress, setIpAddress] = useState('186.6.91.19')
     const url=`http://ip-api.com/json/${ipAddress}`
 
     const getIpData= async()=>{

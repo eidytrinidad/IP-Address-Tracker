@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect } from "react";
+
 import { useContext } from "react";
 import {MapContainer,Marker,TileLayer } from "react-leaflet";
 import { MapContext } from "../context/MapProvider";
@@ -9,7 +9,7 @@ export const Mapa = () => {
   const { ipInfo } = useContext(MapContext);
   const { lat,lon } = ipInfo;
   
-
+  
   return (
     
     <>
