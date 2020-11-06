@@ -1,0 +1,43 @@
+header{
+    width: 100%;
+    background: url(/images/pattern-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 280px;
+    position: relative;
+    .container{
+        padding-top: 2rem;
+        
+        h1{
+            text-align: center;
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+
+        form{
+
+            width: 100%;
+            max-width: 551px;
+            margin: auto;
+            
+            input{
+                width: 80%;
+                height: 55px;
+                border: none;
+                border-radius: 0.7rem 0  0 0.7rem ;
+                padding-left: 1rem;
+                font-size: 1rem;
+                color: $DarkGray;
+                font-weight: 500;
+            }
+            .btn{
+                width: 100%;
+                max-width: 60px;
+                background: #000;
+                border: none;
+                height: 57px;
+                border-radius:0  0.7rem 0.7rem 0;
+            }
+        }
+    }
+}
