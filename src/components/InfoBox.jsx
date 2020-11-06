@@ -5,9 +5,11 @@ import { MapContext } from "../context/MapProvider";
 export const InfoBox = () => {
   const { ipInfo } = useContext(MapContext);
 
-  const { ip, isp, location } = ipInfo;
-  console.log(ipInfo);
-
+  const { query: ip, org, zip,timezone,city,countryCode} = ipInfo;
+  
+  const zone=JSON.stringify(timezone)
+  
+  
   return (
     <>
       {ipInfo && (
@@ -18,21 +20,22 @@ export const InfoBox = () => {
           </div>
           <div className="infoBox">
             <h4>LOCATION</h4>
-            <p>
-              {location && (
-                <span>
-                  {location.city}, {location.country} {location.postalCode}
-                </span>
-              )}
-            </p>
+            <p>{city}, {countryCode} {zip}</p>
           </div>
           <div className="infoBox">
             <h4>TIMEZONE</h4>
-            <p>{location && <span>{location.timezone}</span>}</p>
+              {
+              timezone
+              &&
+            <div className="">
+              <p>{zone.substr(0,9)}</p>
+            <p>{zone.substr(9,20)}</p>
+            </div>
+            }
           </div>
           <div className="infoBox">
             <h4>ISP</h4>
-            <p>{isp}</p>
+            <p>{org}</p>
           </div>
         </article>
       )}

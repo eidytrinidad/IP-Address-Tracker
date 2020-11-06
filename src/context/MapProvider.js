@@ -7,9 +7,10 @@ export const MapContext = createContext()
 export const MapProvider = ({children}) => {
 
     
+    
     const [ipInfo, setipInfo] = useState({})
-    const [ipAddress, setIpAddress] = useState(0)
-    const url=`https://geo.ipify.org/api/v1?apiKey=at_WnI3OALCmE6ScW9DvyNvZm4cuSckI&ipAddress=${ipAddress}`
+    const [ipAddress, setIpAddress] = useState('')
+    const url=`http://ip-api.com/json/${ipAddress}`
 
     const getIpData= async()=>{
         const resp= await fetch(url)
