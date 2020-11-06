@@ -10,7 +10,7 @@ export const MapProvider = ({children}) => {
     
     const [ipInfo, setipInfo] = useState({})
     const [ipAddress, setIpAddress] = useState('186.6.91.19')
-    const url=`http://ip-api.com/json/${ipAddress}`
+    const url=`https://cors-anywhere.herokuapp.com/http://ip-api.com/json/${ipAddress}`
 
     const getIpData= async()=>{
         const resp= await fetch(url)
