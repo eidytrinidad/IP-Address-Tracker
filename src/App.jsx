@@ -1,16 +1,17 @@
-import React from 'react';
-import { Header } from './components/Header';
-import { LocationInfo } from './components/LocationInfo';
-import { Mapa } from './components/Mapa';
+import React from "react";
+import { Header } from "./components/Header";
+import { Mapa } from "./components/Mapa";
+import { MapProvider } from "./context/MapProvider";
 
-import './css/style.scss'
 
+import "./css/style.scss";
 function App() {
   return (
     <>
-    <Header/>
-  
-    <Mapa/>
+      <MapProvider>
+        <Header />
+        <Mapa />
+      </MapProvider>
     </>
   );
 }
